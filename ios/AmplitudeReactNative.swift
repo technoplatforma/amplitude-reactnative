@@ -121,7 +121,7 @@ class ReactNative: NSObject {
                    startNewSession: Bool = false,
                    resolver resolve: RCTPromiseResolveBlock,
                    rejecter reject: RCTPromiseRejectBlock) -> Void {
-        Amplitude.instance(withName: instanceName).setUserId(userId, startNewSession)
+        Amplitude.instance(withName: instanceName).setUserId(userId, startNewSession: startNewSession)
         resolve(true)
     }
 
