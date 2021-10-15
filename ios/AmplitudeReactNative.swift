@@ -29,8 +29,8 @@ class ReactNative: NSObject {
                            resolver resolve: RCTPromiseResolveBlock,
                            rejecter reject: RCTPromiseRejectBlock) -> Void {
        let options = AMPTrackingOptions()
-       options.disableIDFA
-       options.disableIDFV
+       options.disableIDFA()
+       options.disableIDFV()
        Amplitude.instance(withName: instanceName).setTrackingOptions(options)
        resolve(true)
     }
