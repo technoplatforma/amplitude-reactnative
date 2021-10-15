@@ -294,6 +294,13 @@ export class Amplitude {
     );
   }
 
+  /**
+   * Sets using random value for Device ID
+   */
+  useRandomDeviceId(): Promise<boolean> {
+    return AmplitudeReactNative.useRandomDeviceId(this.instanceName);
+  }
+
   // Private bridging calls
   private _setLibraryName(libraryName: string): Promise<boolean> {
     return AmplitudeReactNative.setLibraryName(this.instanceName, libraryName);

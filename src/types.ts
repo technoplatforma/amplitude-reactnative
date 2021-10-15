@@ -71,4 +71,5 @@ export interface AmplitudeReactNativeModule {
     instanceName: string,
     minTimeBetweenSessionsMillis: number,
   ): Promise<boolean>;
+  useRandomDeviceId(instanceName: string): Promise<boolean>;
 }
