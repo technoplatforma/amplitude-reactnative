@@ -25,6 +25,17 @@ class ReactNative: NSObject {
     }
 
     @objc
+    func useRandomDeviceId(_ instanceName: String,
+                           resolver resolve: RCTPromiseResolveBlock,
+                           rejecter reject: RCTPromiseRejectBlock) -> Void {
+       let options = AMPTrackingOptions()
+       options.disableIDFA
+       options.disableIDFV
+       Amplitude.instance(withName: instanceName).setTrackingOptions(options)
+       resolve(true)
+    }
+
+    @objc
     func disableCoppaControl(_ instanceName: String,
                              resolver resolve: RCTPromiseResolveBlock,
                              rejecter reject: RCTPromiseRejectBlock) -> Void {

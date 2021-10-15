@@ -24,6 +24,8 @@ RCT_EXTERN_METHOD(trackingSessionEvents:(NSString *)instanceName trackingSession
 
 RCT_EXTERN_METHOD(setUseDynamicConfig:(NSString *)instanceName useDynamicConfig:(BOOL)useDynamicConfig resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 
+RCT_EXTERN_METHOD(useRandomDeviceId:(NSString *)instanceName resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+
 RCT_EXTERN_METHOD(setUserId:(NSString *)instanceName userId:(NSString *)userId startNewSession:(BOOL)startNewSession resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 
 RCT_EXTERN_METHOD(setServerUrl:(NSString *)instanceName serverUrl:(NSString *)serverUrl resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
