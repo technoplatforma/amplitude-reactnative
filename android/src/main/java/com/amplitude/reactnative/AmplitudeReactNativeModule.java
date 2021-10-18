@@ -105,7 +105,7 @@ public class AmplitudeReactNativeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void useRandomDeviceId(Promise promise) {
+    public void useRandomDeviceId(String instanceName, Promise promise) {
         // no possible to unset using of ADID or AppSetId as Device Id, but they don't use in default
         promise.resolve(true);
     }
